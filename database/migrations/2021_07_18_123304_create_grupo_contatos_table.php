@@ -16,9 +16,9 @@ class CreateGrupoContatosTable extends Migration
         Schema::create('grupo_contatos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('contato_id')->unsigned();
-            $table->foreign('contato_id')->references('id')->on('contatos')->onDelete('cascade');;
+            $table->foreign('contato_id')->references('id')->on('contatos')->onDelete('cascade');
             $table->integer('grupo_id')->unsigned();
-            $table->foreign('grupo_id')->references('id')->on('grupos')->onDelete('cascade');;
+            $table->foreign('grupo_id')->references('id')->on('grupos')->onDelete('cascade');
             $table->timestamps();
         });
     }
